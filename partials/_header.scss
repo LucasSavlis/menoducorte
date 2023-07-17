@@ -1,0 +1,89 @@
+header{
+    width: 100%;
+}
+
+.header-content  {
+    display: flex;  
+    align-items: center;
+    justify-content: space-between;
+}
+i{
+    color: $white-normal;
+}
+
+.header-icons,
+.footer-icons{
+    display: flex;
+    gap: 14px;
+}
+// primeiro uso o @keyframes para dizer o que vou transformar form é de onde vou pegar to para onde vou levar "scale" tamanho que vai mudar NÃO ESQUECER DE CHAMAR ESSA ANIMAÇÃO USANDO O NOME + O TEMPO QUE QUERO QUE ELA DURE
+.header-icons a:hover,
+.footer-icons a:hover{
+    i{
+        animation: traslateY 0.8s infinite alternate;
+        color: $red-light;
+    }
+}
+@keyframes traslateY{
+    from{
+        transform: translateY(0) scale(1); //TRASLATE Y para subir na posição y
+    }
+    to{
+        transform: translateY(-8px) scale(1.3); //scale aumentar tamanho
+    }
+}
+
+.header-button{
+border: solid 1px $white-normal;
+color: $white-normal;
+padding: 8px 24px;
+border-radius: 4px;
+}
+
+.header-button:hover{
+    border: solid 1px $red-light;
+    background-color: $red-light;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+
+}
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30%;
+    img{
+        width: 100%;
+    }//aquiiiiiiiiiiiiii
+}
+.imglogof{
+    max-width: 260px;
+}
+
+@media screen and (max-width: 768px){
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    i{
+        margin-top: 20px;
+    }
+
+    .header-logo img{
+        width: 160px;       
+        margin-top: 46px;
+    }
+    .header-button{
+        display: none;
+    }
+
+
+}

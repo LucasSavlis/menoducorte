@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+:root {
+    font-family: 'sora', sans-serif;
+}
+@import'partials/colors';
+@import'partials/header';
+@import'partials/layout';
+
+body {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: $primary-normal;
+}
+
+
+button {
+    font-family: 'sora', sans-serif;
+    cursor: pointer;
+}
+
+svg {
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    cursor: pointer;//animação cursor ao passar por cima
+    text-decoration: none;
+}
